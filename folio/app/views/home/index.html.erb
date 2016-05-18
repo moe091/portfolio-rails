@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!--
+Portfolio items
+
+fish game
+portfolio site
+white glove
+libra2
+android card game
+brackets addon
+-->  
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    
+        <link href='//fonts.googleapis.com/css?family=Oswald:700,400' rel='stylesheet' type='text/css'>
+       <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Tangerine">
+ 
+    <%= stylesheet_link_tag "style.css" %> 
+    <script type="text/javascript" src="js/phaser.min.js"></script>
+    <title>Bootstrap</title>
+</head>
+<body onresize="resizeGame()">
+
+    
+    <div class="space-50"></div>
+    <div class="container">
+        <div class="col-md-1"></div>
+<div class="col-md-10">
+        <div class="row nav-row">
+            <div class="col-md-4">
+                <span class="nav-content myname">Maurice Nowicki</span>
+            </div>
+            
+            
+            <div class="col-md-8 nav-col">
+                <nav class="navbar pull-right" role="navigation">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                
+                </nav>
+             </div>   
+            
+        </div>
+        <div class="row header-row">
+            <div class="header-img"></div>
+        </div>
+        
+        <div class="row name-row">
+            <div class="title-div">
+
+                <span class="title">Maurice Nowicki<span class="developer"> Developer</span></span>
+
+            </div>
+        </div>
+            
+        
+        <div class="col-md-2"></div>
+        
+        <div class="space-20"> </div>
+        
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+            
+            
+            </div>
+            
+            
+            <div class="col-sm-3"></div>
+        </div>
+        
+        
+        <div class="row content-row">
+
+
+        	<% @projects.each do |p| %>
+        		<div class="col-sm-4">
+                	<div class="col-sm-12 block">
+                		<div class="project_name">
+                			<%= p.name %>
+                		</div>
+                		<div class="project_description">
+                			<%=h truncate(p.description, :length => 125) %>
+                		</div>
+                		<%= image_tag(p.image, class: "project_thumb") %>
+                	</div>
+                </div>
+            <% end %>
+
+
+            <!--
+		            <div class="col-sm-4">
+		                <div class="col-sm-12 block">
+
+
+		                    <div class="project_name">
+		                        Let's Play! Android App
+		                    </div>
+		                    <div class="project_description">
+		                        this is the project is aldfj 
+		                        salkdjal wit lsajdf kljasldk fjwiad nflkawnkjnawdktlkwajlkfjawkdj kajwldj ladsj lfj wldafjl kdsjoiwaoid more...
+		                    </div>
+		                    <img class="project_thumb" src="assets/letsplay_logo.png">
+		                    
+		                </div>
+		            </div>
+            
+
+
+		            <div class="col-sm-4">
+		                <div class="col-sm-12 block">
+		                
+		                
+		                </div>
+		            </div>
+            
+
+
+		            <div class="col-sm-4">
+		                <div class="col-sm-12 block">
+		                
+		                </div>
+		            </div>
+
+		-->
+
+        </div>
+</div>
+    
+    </div>
+    
+    
+    <div class="space-20"> </div>
+    <div class="space-20"> </div>
+    <div class="space-20"> </div>
+    
+    <div class="footer">
+    
+    
+    
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">              </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">          </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
